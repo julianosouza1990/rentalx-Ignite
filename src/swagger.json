@@ -11,9 +11,7 @@
     "paths": {
         "/categories": {
             "post": {
-                "tag": [
-                    "Category"
-                ],
+                "tag":[ "Category"],
                 "sumary": "Create a Category",
                 "description": "Create a new Category",
                 "requestBody": {
@@ -25,13 +23,13 @@
                                     "name": {
                                         "type": "string"
                                     },
-                                    "description": {
+                                    "email": {
                                         "type": "string"
                                     }
                                 },
                                 "example": {
                                     "name": "Category name sample",
-                                    "description": "Category Description sample"
+                                    "email": "user@email.com"  
                                 }
                             }
                         }
@@ -47,32 +45,33 @@
                 }
             },
             "get": {
-                "tag": [
-                    "Category"
-                ],
+                "tag":[ "Category"],
                 "sumary": "Get all Categories",
                 "description": "Get all Categories",
                 "responses": {
                     "200": {
                         "description": "Success",
-                        "content": {
-                            "application/json": {
+                        "content":{
+                            "application/json":{
                                 "schema": {
                                     "type": "array",
-                                    "items": {
+                                    "items":{
                                         "type": "object",
-                                        "properties": {
-                                            "name": {
+                                        "properties":{
+                                            "name":{
                                                 "type": "string"
                                             },
-                                            "description": {
+                                            "description":{
                                                 "type": "string"
                                             }
                                         }
                                     }
-                                }
+                                 }
                             }
                         }
                     }
                 }
             }
+        }
+    }
+}
